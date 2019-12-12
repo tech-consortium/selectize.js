@@ -2185,8 +2185,20 @@
 		positionDropdown: function() {
 			var $control = this.$control;
 			var offset = this.settings.dropdownParent === 'body' ? $control.offset() : $control.position();
-			offset.top += $control.outerHeight(true);
 	
+			var controlHeight = $control.outerHeight(true);
+			var dropdownHeight = this.$dropdown.outerHeight(true);
+	
+			var dropdownBottom = $control.offset().top + controlHeight + dropdownHeight;
+			// 55px is the avg height of footer we use across apps
+			var windowBottom = $(window).height()-55;
+			var optDirection = dropdownBottom < windowBottom ? 'down' : 'up';
+	
+			if (optDirection === 'down') {
+				offset.top += controlHeight;
+			} else if (optDirection === 'up') {
+				offset.top -= dropdownHeight;
+			}
 			this.$dropdown.css({
 				width : $control.outerWidth(),
 				top   : offset.top,
