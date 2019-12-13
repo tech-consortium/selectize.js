@@ -1,3 +1,14 @@
+## v0.12.3-tc.0 · 13 December 2019
+
+#### Note: v0.12.3-tc.0 is v0.12.2 with two TC related changes, so it's essentially a v0.12.3 prerelease version with only TC changes in it.
+*  Add drop-up feature.
+
+   *@becquersant*
+
+*  Fix firefox issue. 
+
+   *@becquersant*
+
 ## v0.12.2 · 23 June 2016
 *  Fix issue preventing build ("Cannot assign to read only property
    'subarray'") because of bug in uglifyjs. (#1072)

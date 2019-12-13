@@ -1,6 +1,6 @@
 {
-	"name": "selectize",
-	"version": "0.12.2",
+	"name": "@tech-consortium/selectize",
+	"version": "0.12.3-tc.0",
 	"title": "Selectize.js",
 	"author": {
 		"name": "Brian Reavis",
